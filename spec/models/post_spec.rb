@@ -10,8 +10,12 @@ describe Post do
     end
   end
 
-  it "post should be unpublished by default" do
-    pending
+  context "#is_published" do
+    let(:post) { Post.create(:title => "new post!", :content => "A great story", :is_published => false)}
+    it "post should be unpublished by default" do
+        expect(post.is_published).to be false
+        post.is_published = true
+    end
   end
 
   # a slug is an automaticaly generated url-friendly
