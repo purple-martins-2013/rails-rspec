@@ -19,7 +19,7 @@ class Post < ActiveRecord::Base
 
   def titleize_title
     self.title = title.titleize
-    #"this is a post" => "This Is A Post"
+
   end
 
   
